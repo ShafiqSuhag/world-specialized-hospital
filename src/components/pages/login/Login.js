@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import useFirebase from '../../../hooks/useFirebase';
 import './Login.css';
 
 
@@ -9,6 +10,8 @@ const Login = () => {
     const onSubmit = data => console.log(data);
     // console.log(watch("email")); // watch input value by passing the name of it
     // console.log(watch(errors.email))
+
+    const {signInusingGoogle} = useFirebase()
     return (
         <div className="vh-100 d-flex justify-content-center align-items-center loginBg " >
 
@@ -16,7 +19,7 @@ const Login = () => {
                 <Card.Body className="d-flex flex-column">
                     <Card.Title style={{ color: "white", textAlign: "center" }} className="fs-1 mb-3">Sign In With</Card.Title>
                     <div className="d-flex align-items-center">
-                        <button className="btn btn-success btn-lg mx-1"> Google </button>
+                        <button onClick={signInusingGoogle} className="btn btn-success btn-lg mx-1"> Google </button>
                         <button className="btn btn-secondary  btn-lg mx-1"> Github </button>
                     </div>
                     <div>
