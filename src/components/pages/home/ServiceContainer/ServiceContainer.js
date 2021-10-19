@@ -19,12 +19,10 @@ const ServiceContainer = () => {
     }, [])
     // console.log('serviceData---', serviceData)
     return (
-        <div className="my-3">
-            <div className="d-flex justify-content-between align-items-center">
-                <div className="mb-3">
-                    <h4>Committed To</h4>
-                    <h1>Excellence</h1>
-                </div>
+        <div  style={{marginTop:"5rem"}}>
+             
+            <div className="d-flex justify-content-between align-items-center pt-3 mt-3">
+                <h1 className="fs-1 text-primary  "> Services</h1>
                 <button className="btn btn-primary ">ALL SERVICES</button>
             </div>
             <Row xs={1} md={3} className="g-5">

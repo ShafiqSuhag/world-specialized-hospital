@@ -18,11 +18,11 @@ We have a sample task for you.
 
 
 
-5. The Services section will have at least 6 services. You can put one or more services in a row based on your design. Each service should have a relevant name, image, short description and a specific button. 
-6. Clicking on the button will take the user to the service detail route. Each route should display detailed information of the service along with the image of the service. 
-7. This route will be private/protected routes. Please make sure that if the user is not logged in, the private route redirects to the login page. 
+[DONE] 5. The Services section will have at least 6 services. You can put one or more services in a row based on your design. Each service should have a relevant name, image, short description and a specific button. 
+[DONE] 6. Clicking on the button will take the user to the service detail route. Each route should display detailed information of the service along with the image of the service. 
+[DONE] 7. This route will be private/protected routes. Please make sure that if the user is not logged in, the private route redirects to the login page. 
 
-8. You Must implement Email and password based Authentication. This means, you will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view .
+[DONE] 8. You Must implement Email and password based Authentication. This means, you will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view .
 [DONE]  9. Also, implement at least one extra login which could be (facebook, github, google, etc).
 [DONE]  10. Once logged in, the user name, logout button should appear on the header which will log out the user once clicked. Displaying user profile pic on the header is optional.
 [DONE]  11. Add two more routes. Relevant to your website. These two routes will be private. You can put anything relevant to your site on these two routes. 
