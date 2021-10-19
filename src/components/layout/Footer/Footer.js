@@ -19,7 +19,7 @@ const Footer = () => {
                     <div><i className="fas fa-map-marker  me-2"></i> Mountain View, California, United States</div>
                 </div>
             </div>
-            <div className="container text-center mb-3 text-secondary">
+            <div className="container text-center my-3 text-secondary">
                 ©Copyright  to World Specialized Hospital
             </div>
 

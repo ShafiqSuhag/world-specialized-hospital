@@ -18,8 +18,8 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto ">
                             <Link className=" navbar-link " to="/home">Home</Link>
-                            <Link className=" navbar-link " to="/home">About Us</Link>
-                            <Link className=" navbar-link " to="/home">Contact</Link>
+                            <Link className=" navbar-link " to="/book-appointment">Book Appointment</Link>
+                            
                            
                             {/* dropdropdown start  */}
                              {/* <NavDropdown title="Dropdown3" id="basic-nav-dropdown">
@@ -45,6 +45,7 @@ const Header = () => {
                                     <>
                                         <Nav.Link className="text-black"> Hi , {user?.displayName}</Nav.Link>
                                         <div> <img className="rounded-circle mx-2 profileImage "  src={user.photoURL} alt=""/>   </div>
+                                        <Nav.Link  as={Link} to="/my-account" className=""> My Account </Nav.Link>
                                         <i onClick={lotOut} className="fas fa-sign-out-alt" style={{ cursor: "pointer" }} title="logout"></i>
                                     </>
                             }

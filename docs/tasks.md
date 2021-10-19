@@ -12,7 +12,7 @@ We have a sample task for you.
 
 [DONE]2. Make sure your design and website idea is unique. First, finalize your idea (what type of website you want to build). Then google the site design or visit themeforest. to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
 
-3. Home page will have a header (simple navbar), banner, services, and footer 
+[DONE] 3. Home page will have a header (simple navbar), banner, services, and footer 
 4. Add two extra sections in the home page in addition to the 4 sections mentioned above.
 
 
@@ -23,10 +23,10 @@ We have a sample task for you.
 7. This route will be private/protected routes. Please make sure that if the user is not logged in, the private route redirects to the login page. 
 
 8. You Must implement Email and password based Authentication. This means, you will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view .
-9. Also, implement at least one extra login which could be (facebook, github, google, etc).
+[DONE]  9. Also, implement at least one extra login which could be (facebook, github, google, etc).
 10. Once logged in, the user name, logout button should appear on the header which will log out the user once clicked. Displaying user profile pic on the header is optional.
 11. Add two more routes. Relevant to your website. These two routes will be private. You can put anything relevant to your site on these two routes. 
-12. Will need a 404 page (not found page)
+[DONE]  12. Will need a 404 page (not found page)
 
 
 

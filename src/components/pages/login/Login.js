@@ -16,7 +16,7 @@ const Login = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const redirectUri = location.state?.from?.pathname || '/login' 
+    const redirectUri = location.state?.from?.pathname || '/home' 
     
     console.log('comefrom - ' , redirectUri)
 
@@ -38,12 +38,12 @@ const Login = () => {
             <Card style={{ width: '23rem', padding: "5rem 1rem" }} className="bg-info bg-gradient">
                 <Card.Body className="d-flex flex-column">
                     <Card.Title style={{ color: "white", textAlign: "center" }} className="fs-1 mb-3">Sign In With</Card.Title>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center justify-content-center">
                         <button onClick={handleGoogleSignIn} className="btn btn-success btn-lg mx-1"> Google </button>
-                        <button onClick={signInUsingGithub} className="btn btn-secondary  btn-lg mx-1"> Github </button>
+                        {/* <button onClick={signInUsingGithub} className="btn btn-secondary  btn-lg mx-1"> Github </button> */}
                     </div>
                     <div>
-                        <h1 className="fs-2 text-white text-center mt-3">OR</h1>
+                        <h1 className="fs-4 text-white text-center mt-3">OR</h1>
                     </div>
                 </Card.Body>
                 {/* <Card.Img variant="top" src="./images/Login-amico.svg" /> */}
