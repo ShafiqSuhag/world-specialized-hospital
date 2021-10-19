@@ -10,7 +10,7 @@ const ServiceContainer = () => {
     const [serviceData, setServiceData] = useState([])
 
     useEffect(() => {
-        fetch('http://custom-json-database.netlify.app/services.json')
+        fetch('https://custom-json-database.netlify.app/services.json')
             .then(response => response.json())
             .then(result => {
                 console.log('JSON DATA', result)
