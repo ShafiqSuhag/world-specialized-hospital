@@ -41,7 +41,7 @@ const ServiceDetails = (props) => {
                 <div className="col-md-6">
                     <h1 className="fs-3 my-3">{serviceItemDetails?.serviceTitle}</h1>
                     <p>{serviceItemDetails?.serviceInfo}</p>
-                    <Link to="/home" style={{ textDecoration:"none",  }}>...back to all service</Link>
+                    <Link to="/home" style={{ textDecoration:"none",  }}>...back to all services</Link>
                 </div>
             </div>
 
