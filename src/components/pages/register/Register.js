@@ -1,14 +1,19 @@
 import React from 'react';
 import { Card, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import useFirebase from '../../../hooks/useFirebase';
 import './Login.css';
 
 
 const Register = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
-    // console.log(watch("email")); // watch input value by passing the name of it
-    // console.log(watch(errors.email))
+    const {signInusingGoogle} = useFirebase()
+    const handleGoogleSignIn = () => {
+        console.log('handleGoogleSignIn')
+        alert('handle Sign in 2 ')
+    }
+    // const {signInusingGoogle} = useFirebase()
     return (
         <div className="vh-100 d-flex justify-content-center align-items-center loginBg " >
 
@@ -16,7 +21,7 @@ const Register = () => {
                 <Card.Body className="d-flex flex-column">
                     <Card.Title style={{ color: "white", textAlign: "center" }} className="fs-1 mb-3">Sign Up With</Card.Title>
                     <div className="d-flex align-items-center">
-                        <button className="btn btn-success btn-lg mx-1"> Google </button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-success btn-lg mx-1"> Google </button>
                         <button className="btn btn-secondary  btn-lg mx-1"> Github </button>
                     </div>
                     <div>
@@ -41,7 +46,7 @@ const Register = () => {
                             <Form.Control type="email" placeholder="name@example.com" {...register("email", { required: true })} />
                         </FloatingLabel>
                         {errors.email && <div className="mb-3">Email field is required</div>}
-                        
+
                         <FloatingLabel controlId="floatingPassword" label="Password*">
                             <Form.Control type="password" placeholder="Password"  {...register("password")} />
                         </FloatingLabel>

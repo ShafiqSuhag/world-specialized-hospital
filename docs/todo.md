@@ -24,8 +24,10 @@ Project Name  : Smile Care ( Dental Website)
 - [D] Setup nav menu 
 - [D] Seup react router 
 - [D] singup / login 
-- firebase authentication 
+- [c] firebase authentication 
+
 - signin with google  setup 
+- Private Route Setup 
 
 
 - 6 service section data 

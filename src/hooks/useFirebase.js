@@ -1,14 +1,15 @@
 import { getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
-import { useState } from 'react';
+import { useState } from "react";
 import firebaseInit from "../firebase/firebase.init";
 // firebaseInit()
 
-firebaseInit()
 
+firebaseInit()
 const useFirebase = () => {
+
     // firebaseInit()
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+    const [error, setError] = useState("");
 
 
     const auth = getAuth();
@@ -18,21 +19,20 @@ const useFirebase = () => {
     const githubProvider = new GithubAuthProvider();
 
     // google 
-    const signInusingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                console.log(result.user)
-                setUser(result.user)
-            }).catch((error) => {
-                setError(error.message)
-            });
+    const signInUsingGoogle = () => {
+        return signInWithPopup(auth, googleProvider)
+            
     }
     // github
-    const signInusingGithub = () => {
+    const signInUsingGithub = () => {
+        console.log('signInUsingGithub')
         signInWithPopup(auth, githubProvider)
             .then((result) => {
+                console.log('user - ', result.user)
                 setUser(result.user)
+                setError('')
             }).catch((error) => {
+                console.log(error.message)
                 setError(error.message)
             });
     }
@@ -42,7 +42,7 @@ const useFirebase = () => {
         if (user) {
             setUser(user)
         } else {
-            setUser({})
+            // setUser({})
         }
     });
     // observer 
@@ -53,6 +53,7 @@ const useFirebase = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
             // Sign-out successful.
+            setUser({})
         }).catch((error) => {
             // An error happened.
         });
@@ -62,8 +63,8 @@ const useFirebase = () => {
     return {
         user,
         error,
-        signInusingGoogle,
-        signInusingGithub,
+        signInUsingGoogle,
+        signInUsingGithub,
         lotOut
 
     }
