@@ -24,14 +24,14 @@ We have a sample task for you.
 
 8. You Must implement Email and password based Authentication. This means, you will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view .
 [DONE]  9. Also, implement at least one extra login which could be (facebook, github, google, etc).
-10. Once logged in, the user name, logout button should appear on the header which will log out the user once clicked. Displaying user profile pic on the header is optional.
-11. Add two more routes. Relevant to your website. These two routes will be private. You can put anything relevant to your site on these two routes. 
+[DONE]  10. Once logged in, the user name, logout button should appear on the header which will log out the user once clicked. Displaying user profile pic on the header is optional.
+[DONE]  11. Add two more routes. Relevant to your website. These two routes will be private. You can put anything relevant to your site on these two routes. 
 [DONE]  12. Will need a 404 page (not found page)
 
 
 
 ### Bonus: 
-1. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website has to be relevant. No `lorem ipsum` please.
+[DONE] 1. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website has to be relevant. No `lorem ipsum` please.
 2. Meaningful `readme.md` file containing your website name, a little description, link to your live site. And at least five bullet points mentioning different features and functionality of your website.
 3. After reloading the page on a private route, the user should not be redirected to the login page.
 4. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional
