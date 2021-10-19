@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
 
@@ -9,21 +10,28 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar  expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home">BSH</Navbar.Brand>
+                    <Link className=" fs-1 text-logo " to="/home">WSH</Link>
+                    {/* <Navbar.Brand as={Link} to="/home" className="fs-1 text-logo">BSH</Navbar.Brand> */}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/my-account">My Account</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <Nav className="mx-auto ">
+                            <Link className=" navbar-link " to="/home">Home</Link>
+                            <Link className=" navbar-link " to="/home">About Us</Link>
+                            <Link className=" navbar-link " to="/home">Contact</Link>
+                           
+                            {/* dropdropdown start  */}
+                             {/* <NavDropdown title="Dropdown3" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
+                            {/* dropdropdown end  */}
+                            
+                           
                         </Nav>
                         <Nav className="align-items-center">
                             {
@@ -35,7 +43,8 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                        <Nav.Link className="text-black"> Welcome , {user?.displayName}</Nav.Link>
+                                        <Nav.Link className="text-black"> Hi , {user?.displayName}</Nav.Link>
+                                        <div> <img className="rounded-circle mx-2 profileImage "  src={user.photoURL} alt=""/>   </div>
                                         <i onClick={lotOut} className="fas fa-sign-out-alt" style={{ cursor: "pointer" }} title="logout"></i>
                                     </>
                             }

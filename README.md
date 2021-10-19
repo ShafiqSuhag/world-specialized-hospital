@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+#  WSP - World Specialized Hospital
+
+Project Live Link : https://world-specialized-hospital.web.app/
+
+
+## Features 
+* Home 
+* About Us 
+* Contact Us 
+* Only Logged in user can see service details 
+
+
+## Project Technology : 
+* React.js
+* Bootstrap
+* hosted in firebase
+
+### Notes : 
+* In this website I tried to use several json data as api . 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

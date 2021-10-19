@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
 import Footer from './components/layout/Footer/Footer';
 import Header from './components/layout/Header/Header';
 import Home from './components/pages/home/home/Home';
@@ -9,6 +8,7 @@ import MyAccount from './components/pages/MyAccount/MyAccount';
 import Register from './components/pages/register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
+import './style.css';
 
 function App() {
   return (

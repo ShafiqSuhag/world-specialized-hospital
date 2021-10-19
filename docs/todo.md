@@ -1,3 +1,21 @@
+
+
+- InfoGraphic Section 
+- footer 
+
+
+# Homepage 
+- Header  2.32 pm - 25m - 4.05 (1.30hr)
+- Slider [DONE]
+- Service
+- Doctors Profiel 
+- Patient Testimonial 
+- Footer
+
+
+
+
+
 # Layout setup 
 - have a header (simple navbar), banner, services, and footer  & Add any extra section
 - 6 service section

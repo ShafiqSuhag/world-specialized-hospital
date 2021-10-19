@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import './Service.css';
 
-const Service = ({props}) => {
+const Service = (props) => {
 
 
    const {img, serviceTitle} =props.serviceItem
@@ -15,7 +15,7 @@ const Service = ({props}) => {
             </div>
 
             {/* <Card.Header className="h2">Dental Services</Card.Header> */}
-            <h2 className="ps-3">
+            <h2 className="ps-3 fs-5">
                 {serviceTitle}
             </h2>
             <Card.Body>

@@ -7,10 +7,11 @@ We have a sample task for you.
 
 
 ### Task Detail: 
-1. Website has to be a healthcare related website. It could be related to a general hospital, specialized hospital, diagnostic Lab, Doctors' chamber, Dental clinic, eye care hospital, Pharmacy, medicine, physical therapy, exercise, gym, healthcare tech, nursing service, elderly home, mental care, Feminine care, Ambulance service, etc. 
+[DONE] 1. Website has to be a healthcare related website. It could be related to a general hospital, specialized hospital, diagnostic Lab, Doctors' chamber, Dental clinic, eye care hospital, Pharmacy, medicine, physical therapy, exercise, gym, healthcare tech, nursing service, elderly home, mental care, Feminine care, Ambulance service, etc. 
 
 
-2. Make sure your design and website idea is unique. First, finalize your idea (what type of website you want to build). Then google the site design or visit themeforest. to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
+[DONE]2. Make sure your design and website idea is unique. First, finalize your idea (what type of website you want to build). Then google the site design or visit themeforest. to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
+
 3. Home page will have a header (simple navbar), banner, services, and footer 
 4. Add two extra sections in the home page in addition to the 4 sections mentioned above.
 
