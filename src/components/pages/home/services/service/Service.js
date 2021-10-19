@@ -7,7 +7,7 @@ const Service = ({props}) => {
 
    const {img, serviceTitle} =props.serviceItem
 
-   console.log('service item ' , props)
+   
     return (
         <Card border="light shadow bg-body " >
             <div className=" p-3 bg-body rounded">

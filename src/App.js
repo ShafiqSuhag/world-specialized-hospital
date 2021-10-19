@@ -8,6 +8,7 @@ import Login from './components/pages/login/Login';
 import MyAccount from './components/pages/MyAccount/MyAccount';
 import NotFound from './components/pages/NotFound/NotFound';
 import Register from './components/pages/register/Register';
+import ServiceDetails from './components/pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
 import './style.css';
@@ -26,18 +27,24 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/my-account">
-              <MyAccount></MyAccount>
+            <PrivateRoute path="/service-details/:serviceId">
+              <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <PrivateRoute path="/book-appointment">
-              <BookAppointment></BookAppointment>
-            </PrivateRoute>
+            
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
+            {/* private route  */}
+            <PrivateRoute path="/my-account">
+              <MyAccount></MyAccount>
+            </PrivateRoute>
+            <PrivateRoute path="/book-appointment">
+              <BookAppointment></BookAppointment>
+            </PrivateRoute>
+            {/* private route / */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>
