@@ -13,7 +13,7 @@ We have a sample task for you.
 [DONE]2. Make sure your design and website idea is unique. First, finalize your idea (what type of website you want to build). Then google the site design or visit themeforest. to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
 
 [DONE] 3. Home page will have a header (simple navbar), banner, services, and footer 
-4. Add two extra sections in the home page in addition to the 4 sections mentioned above.
+[DONE]  4. Add two extra sections in the home page in addition to the 4 sections mentioned above.
 
 
 
@@ -39,33 +39,3 @@ We have a sample task for you.
 [DONE] 6. Clean and organized Code. Organize components and add comments when needed
 [DONE] 7. Display some error when user email address or password don't match.
 
-
-### Optional:
-1. Though Email and password validation is not mandatory for marks. We highly recommend to implement those.
-2. You may use `react hook form`, basic html form or any library for authentication
-3. Add some mouseover animation while taking the mouse on the services card
-4. If you want to take a challenge. consider using `react-leaflet`
-5. Please Use icons whenever applicable and use fonts
-6. Make the footer little more realistic
-7. Optimize your images
-8. Add something extra of your own. This will help you in the future.
-9. Allow creation of multiple accounts with the same email address
-
-
-### Additional information:
-1. If needed, create your own fake data. you can load the data from a `.json` file or you can host it anywhere you want. 
-2. You can use local image or host image anywhere if you want or both.
-3. You are free to use any css library you want. But, we recommend using tailwind css. 
-4. If needed you can mix CSS framework with a component library
-5. Use firebase auth
-6. Local storage is optional
-7. Environment variable is recommended but optional
-8. Try to host your site on Firebase (netlifiy host will need extra configuration)
-
-### What to submit 
-1. Your github repository
-2. Your live website link
-
-
-
-Have FUN! Have Patience. 
