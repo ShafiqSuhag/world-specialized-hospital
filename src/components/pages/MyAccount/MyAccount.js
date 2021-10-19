@@ -16,13 +16,13 @@ const MyAccount = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Email </th>
-                        <td>{user?.email}</td>
+                        <th scope="row">Full Name</th>
+                        <td>{user?.displayName}</td>
                         
                     </tr>
                     <tr>
-                        <th scope="row">Full Name</th>
-                        <td>{user?.displayName}</td>
+                        <th scope="row">Email </th>
+                        <td>{user?.email}</td>
                         
                     </tr>
                     <tr>

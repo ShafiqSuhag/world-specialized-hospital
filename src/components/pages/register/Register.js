@@ -2,8 +2,9 @@ import React from 'react';
 import { Card, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import './Login.css';
+import './Register.css';
 
 
 const Register = () => {
@@ -101,6 +102,9 @@ const Register = () => {
                     </Card.Body>
                     <Card.Body>
                         {error && <p className="errorMsg"> {error}</p>}
+                    </Card.Body >
+                    <Card.Body className="text-center ">
+                        <Link to="/login" className="text-white fw-bold fs-4" style={{ textDecoration:"none" }}>Already have an account? </Link>
                     </Card.Body>
 
 

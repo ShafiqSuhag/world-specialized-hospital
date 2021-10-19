@@ -46,7 +46,7 @@ const Header = () => {
                                     :
                                     <>
                                         <Nav.Link className="text-black"> Hi , {user?.displayName}</Nav.Link>
-                                        <div> <img className="rounded-circle mx-2 profileImage "  src={user.photoURL} alt=""/>   </div>
+                                        <div>  <Link to="/my-account"> <img className="rounded-circle mx-2 profileImage "  src={user.photoURL} alt=""/> </Link>  </div>
                                         
                                         <i onClick={lotOut} className="fas fa-sign-out-alt" style={{ cursor: "pointer" }} title="logout"></i>
                                     </>

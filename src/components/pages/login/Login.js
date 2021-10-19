@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 import './Login.css';
 
@@ -57,7 +57,7 @@ const Login = () => {
         <div className="container p-2 shadow  rounded">
             <div className=" p-3 d-flex justify-content-center align-items-center loginBg " >
 
-                <Card style={{ width: '23rem', padding: "5rem 1rem" }} className="bg-info bg-gradient">
+                <Card style={{ width: '25rem', padding: "5rem 1rem" }} className="bg-info bg-gradient">
                     <Card.Body className="d-flex flex-column">
                         <Card.Title style={{ color: "white", textAlign: "center" }} className="fs-1 mb-3">Sign In With</Card.Title>
                         <div className="d-flex align-items-center justify-content-center">
@@ -78,13 +78,15 @@ const Login = () => {
                             <FloatingLabel controlId="floatingPassword" label="Password*">
                                 <Form.Control type="password" placeholder="Password"  {...register("password")} />
                             </FloatingLabel>
-                            <input type="submit" className="btn btn-warning w-100 mt-3 " />
+                            <input type="submit" className="btn btn-primary w-100 mt-3 " />
                         </form>
                     </Card.Body>
                     <Card.Body>
                         {error && <p className="errorMsg"> {error}</p>}
                     </Card.Body>
-
+                    <Card.Body className="text-center">
+                        <Link to="/register" className="text-white fw-bold fs-6" style={{ textDecoration:"none" }}>New to World Specialized Hospital? </Link>
+                    </Card.Body>
                 </Card>
             </div>
         </div>

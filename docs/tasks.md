@@ -32,12 +32,12 @@ We have a sample task for you.
 
 ### Bonus: 
 [DONE] 1. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website has to be relevant. No `lorem ipsum` please.
-2. Meaningful `readme.md` file containing your website name, a little description, link to your live site. And at least five bullet points mentioning different features and functionality of your website.
-3. After reloading the page on a private route, the user should not be redirected to the login page.
+[DONE] 2. Meaningful `readme.md` file containing your website name, a little description, link to your live site. And at least five bullet points mentioning different features and functionality of your website.
+[DONE] 3. After reloading the page on a private route, the user should not be redirected to the login page.
 4. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional
-5. Use Context API
-6. Clean and organized Code. Organize components and add comments when needed
-7. Display some error when user email address or password don't match.
+[DONE] 5. Use Context API
+[DONE] 6. Clean and organized Code. Organize components and add comments when needed
+[DONE] 7. Display some error when user email address or password don't match.
 
 
 ### Optional:
