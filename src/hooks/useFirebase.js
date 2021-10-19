@@ -1,4 +1,4 @@
-import { getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import firebaseInit from "../firebase/firebase.init";
 // firebaseInit()
@@ -7,8 +7,14 @@ import firebaseInit from "../firebase/firebase.init";
 firebaseInit()
 const useFirebase = () => {
 
+
+
+
+
     // firebaseInit()
     const [user, setUser] = useState({});
+    // const [userEmail, setUserEmail] = useState({});
+    // const [userPassword, setUserPassword] = useState({});
     const [error, setError] = useState("");
 
 
@@ -18,34 +24,48 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+    // signup by emial-password
+    const signUpUsingEmailPassword = (userEmail, userPassword) => {
+        console.log('inside -register ')
+        return createUserWithEmailAndPassword(auth, userEmail, userPassword)
+    }
+    // signin by emial-password
+    const signInUsingEmailPassword = (userEmail, userPassword) => {
+        console.log('inside -signInUsingEmailPassword ')
+        return signInWithEmailAndPassword(auth, userEmail, userPassword)
+    }
+
+
+
     // google 
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, googleProvider)
-            
-    }
-    // github
-    const signInUsingGithub = () => {
-        console.log('signInUsingGithub')
-        signInWithPopup(auth, githubProvider)
-            .then((result) => {
-                console.log('user - ', result.user)
-                setUser(result.user)
-                setError('')
-            }).catch((error) => {
-                console.log(error.message)
-                setError(error.message)
-            });
-    }
 
-    // observer 
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            setUser(user)
-        } else {
-            // setUser({})
-        }
-    });
-    // observer 
+    }
+    
+
+    
+
+
+
+
+    // ************************** UPDATE 
+    const updateProfileInfo = (displayName ) => {
+
+        updateProfile(auth.currentUser, {
+            displayName: displayName, photoURL: "./images/profile-img.jpg"
+        }).then(() => {
+            // Profile updated!
+            console.log(' Profile updated!')
+            // ...
+        }).catch((error) => {
+            // An error occurred
+            console.log(' Profile update error X', error)
+            // ...
+        });
+    }
+    
+    // ************************** UPDATE /
 
 
     // signout 
@@ -59,12 +79,24 @@ const useFirebase = () => {
         });
     }
 
+    // observer 
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUser(user)
+        } else {
+            // setUser({})
+        }
+    });
+    // observer 
 
     return {
         user,
         error,
+        setError,
+        signUpUsingEmailPassword,
+        signInUsingEmailPassword,
+        updateProfileInfo, 
         signInUsingGoogle,
-        signInUsingGithub,
         lotOut
 
     }

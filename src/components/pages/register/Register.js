@@ -1,19 +1,64 @@
 import React from 'react';
 import { Card, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
-import useFirebase from '../../../hooks/useFirebase';
+import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../../hooks/useAuth';
 import './Login.css';
 
 
 const Register = () => {
+
+    const {signUpUsingEmailPassword, signInUsingGoogle, updateProfileInfo, error, setError} = useAuth()
+
+    // States 
+    // const [email, setEmail] = useState('')
+    // const [password, setPassword] = useState('')
+
+
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
-    const { signInusingGoogle } = useFirebase()
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirectUri = location.state?.from?.pathname || '/home'
+
+    const onSubmit = data => {
+        console.log('onSubmit-n',data)
+        signUpUsingEmailPassword(data.email, data.password)
+        .then((result) => {
+            // Signed in 
+           console.log(result.user)
+           setError('')
+           updateProfileInfo(data.name)
+           history.push(redirectUri)
+            // ...
+        })
+        .catch((error) => {
+            console.log(error.message)
+            setError(error.message)
+            // ..
+        });
+    };
+    
+   
     const handleGoogleSignIn = () => {
-        console.log('handleGoogleSignIn')
-        alert('handle Sign in 2 ')
+        signInUsingGoogle()
+            .then((result) => {
+                console.log('user - ', result.user)
+                history.push(redirectUri)
+
+            }).catch((error) => {
+
+            });
     }
     // const {signInusingGoogle} = useFirebase()
+
+    // const handleUserEmailInput = e => {
+    //     setEmail(e.target.value)
+    // }
+    // const handleUserPasswordInput = e => {
+    //     setPassword(e.target.value)
+    // }
+
     return (
         <div className="container p-2 shadow  rounded">
             <div className=" p-3 d-flex justify-content-center align-items-center loginBg " >
@@ -23,7 +68,7 @@ const Register = () => {
                         <Card.Title style={{ color: "white", textAlign: "center" }} className="fs-1 mb-3">Sign Up With</Card.Title>
                         <div className="d-flex align-items-center justify-content-center">
                             <button onClick={handleGoogleSignIn} className="btn btn-outline-success btn-lg mx-1"> Google </button>
-                           
+
                         </div>
                         <div>
                             <h1 className="fs-2 text-white text-center mt-3">OR</h1>
@@ -53,6 +98,9 @@ const Register = () => {
                             </FloatingLabel>
                             <input type="submit" className="btn btn-warning w-100 mt-3 " />
                         </form>
+                    </Card.Body>
+                    <Card.Body>
+                        {error && <p className="errorMsg"> {error}</p>}
                     </Card.Body>
 
 

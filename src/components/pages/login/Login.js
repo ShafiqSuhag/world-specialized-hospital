@@ -8,9 +8,9 @@ import './Login.css';
 
 const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    
 
-    const { signInUsingGoogle, error } = useAuth()
+    const {signInUsingEmailPassword, signInUsingGoogle, error, setError } = useAuth()
 
     const location = useLocation();
     const history = useHistory();
@@ -30,6 +30,29 @@ const Login = () => {
                 // setError(error.message)
             });
     }
+
+
+
+    // sing using email 
+    const onSubmit = data => {
+        console.log('onSubmit-n',data)
+        signInUsingEmailPassword(data.email, data.password)
+        .then((result) => {
+            // Signed in 
+           console.log(result.user)
+           setError('')
+           history.push(redirectUri)
+            // ...
+        })
+        .catch((error) => {
+            console.log(error.message)
+            setError(error.message)
+            // ..
+        });
+    };
+    // sing using email end
+
+
     return (
         <div className="container p-2 shadow  rounded">
             <div className=" p-3 d-flex justify-content-center align-items-center loginBg " >
